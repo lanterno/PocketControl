@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'users',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -77,6 +79,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'pocket.wsgi.application'
+
+AUTH_USER_MODEL = 'accounts.User'
+USERS_CREATE_SUPERUSER = DEBUG
+USERS_SUPERUSER_EMAIL = 'admin@sysx.com'
+USERS_SUPERUSER_PASSWORD = '123qwe'
 
 
 # Internationalization
