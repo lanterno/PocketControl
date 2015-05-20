@@ -11,6 +11,8 @@ class User(AbstractUser):
     full_name = models.CharField(
         _('Full name'), max_length=100, null=True, blank=True, default="")
 
+    money = models.FloatField(_("Money"), default=0)
+
     def __str__(self):
         return self.get_full_name()
 
