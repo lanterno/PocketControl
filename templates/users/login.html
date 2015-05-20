@@ -36,11 +36,17 @@
                                 {% include "users/partials/errors.html" %}
                             {% endif %}
                             {% csrf_token %}
-                            {% for field in form %}
-                                {% include "users/partials/field.html" %}
-                            {% endfor %}
+                            <div class="form-group">
+                    {{ form.login.errors }}
+                    <input class="form-control" placeholder="Email address" {{ form.username }}
+
+                </div>
+                <div class="form-group">
+                      {{ form.password.errors }}
+                      <input class="form-control" placeholder="Password" {{ form.password }}
+                </div>
                             <div class="button-wrapper submit">
-                                <input type="submit" value="{% trans 'Log in' %}" />
+                                <input type="submit" class="btn btn-success btn-lg" value="{% trans 'Log in' %}" />
                             </div>
                         </form>
                         {% comment %}
