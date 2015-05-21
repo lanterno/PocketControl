@@ -8,7 +8,7 @@ class UserAdmin(UserAdmin):
     list_filter = ('is_active',)
     fieldsets = (
         (None, {
-            'fields': ('email', 'password')
+            'fields': ('email', 'password', 'money')
         }),
         (_('Status'), {
             'fields': ('is_active',)
